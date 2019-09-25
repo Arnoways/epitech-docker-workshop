@@ -2,8 +2,8 @@
 
 ## Prérequis
 
-(Installer docker)[https://docs.docker.com/install/]  
-(Installer docker-compose)[https://docs.docker.com/compose/install/]
+[Installer docker](https://docs.docker.com/install/)  
+[Installer docker-compose](https://docs.docker.com/compose/install/)
 
 ## D'autres workshops bien faits:
   - https://github.com/harbur/docker-workshop
@@ -22,3 +22,7 @@ Pourquoi ne pas présenter un de ceux-là?
 └── front       # code frontend (npm run serve)
 ```
 
+## Objectifs
+ - dockerizer nos deux parties de codes
+ - docker-compose pour linker le tout
+ 
