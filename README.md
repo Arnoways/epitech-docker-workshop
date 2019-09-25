@@ -10,10 +10,6 @@
   - https://github.com/alexryabtsev/docker-workshop
   - https://github.com/gvilarino/docker-workshop
 
-Pourquoi ne pas présenter un de ceux-là? 
-1) C'est le travail des autres.
-2) J'essaie d'axer ce "workshop"-ci dans le thème du Time Manager.
-
 
 ## Time Manager
 ```
@@ -23,6 +19,6 @@ Pourquoi ne pas présenter un de ceux-là?
 ```
 
 ## Objectifs
- - dockerizer nos deux parties de codes
+ - "dockerizer" nos deux parties de codes
  - docker-compose pour linker le tout
  

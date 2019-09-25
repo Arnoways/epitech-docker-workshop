@@ -1,0 +1,46 @@
+version: '3'
+services:
+  api:
+    build:
+      context: ./api
+    ports:
+      - 3000:3000
+    volumes:
+      - ./api:/app
+    networks:
+      - back-network
+      - front-network
+    restart: unless-stopped
+    depends_on:
+      - bdd
+  
+  front:
+    build:
+      context: ./front
+    ports:
+      - 8080:8080
+    volumes:
+      - ./front:/app
+    networks:
+      - front-network
+    restart: unless-stopped
+    depends_on:
+      - api
+
+  bdd:
+    image: postgres
+    environment:
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=postgres"
+      - "POSTGRES_DB=workshop"
+    networks:
+      - back-network
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    
+volumes:
+  db-data:
+
+networks:
+  back-network:
+  front-network:
