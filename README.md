@@ -28,3 +28,19 @@
  - "dockerizer" nos deux parties de codes
  - docker-compose pour linker le tout avec une bdd
  
+
+
+## Commandes utiles
+
+```
+docker-compose ps                         # affiche quels conteneurs sont up et leurs ports.
+docker-compose ps -a                      # affiche tous les conteneurs et les codes de sorties de certains si sont down.
+
+docker-compose logs api||front||bdd       # affiche tous les logs du conteneur choisit.
+docker-compose logs -f api||front||bdd    # suit le log output du conteneur choisit.
+
+docker-compose top                        # affiche les proccess en execution / conteneur.
+
+docker-compose exec                       # permet d'executer une commande dans un conteneur.
+docker-compose exec bdd bash              # rentre dans le conteneur bdd en executant bash.
+```
